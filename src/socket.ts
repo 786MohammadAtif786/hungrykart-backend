@@ -7,7 +7,7 @@ let io: Server;
 
 export function initSocket(httpServer: HttpServer) {
   io = new Server(httpServer, {
-    cors: { origin: process.env.CLIENT_URL, credentials: true },
+    cors: { origin: "https://hungrykart-backend.onrender.com", credentials: true },
   });
 
   io.use(async (socket: any, next: any) => {
